@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images\logo2.png">
+	<title>Gallery - AMI</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Language -->
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('fr')">FR</button>
+</div>
+
+<header>
+<div class="header-content">
+<img src="images/logo.png" class="logo">
+
+<div class="header-text">
+<h1 data-en="Our Impact Gallery" data-fr="Galerie de nos actions"></h1>
+<p data-en="Discover our work in education and community support"
+   data-fr="Découvrez nos actions en éducation et soutien communautaire"></p>
+</div>
+		<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</div>
+</header>
+
+<nav>
+<a href="index.html" data-en="Home" data-fr="Accueil"></a>
+<a href="about.html" data-en="About" data-fr="À propos"></a>
+<a href="services.html" data-en="Services" data-fr="Services"></a>
+<a href="projects.html" data-en="Projects" data-fr="Réalisations"></a>
+<a href="gallery.html" data-en="Gallery" data-fr="Galerie"></a>
+<a href="contact.html" data-en="Contact" data-fr="Contact"></a>
+<a href="donate.html" class="donate-nav"
+   data-en="Donate"
+   data-fr="Don"></a>
+</nav>
+
+<section>
+
+<div class="gallery">
+
+<!-- IMAGE 1 -->
+<div class="gallery-item fade-in">
+<img src="images/edu1.jpeg" onclick="openImage(this)">
+<h3 data-en="School gathering activity"
+    data-fr="Activité scolaire"></h3>
+<p data-en="Children gathered for a learning activity supported by AMI."
+   data-fr="Des enfants réunis pour une activité d’apprentissage soutenue par l’AMI."></p>
+</div>
+
+<!-- IMAGE 2 -->
+<div class="gallery-item fade-in">
+<img src="images/schoolMaterial.jpg" onclick="openImage(this)">
+<h3 data-en="Distribution of school materials"
+    data-fr="Distribution de fournitures scolaires"></h3>
+<p data-en="Providing learning materials to support students in school."
+   data-fr="Fourniture de matériel scolaire pour soutenir les élèves."></p>
+</div>
+
+<!-- IMAGE 3 -->
+<div class="gallery-item fade-in">
+<img src="images/schoolCostruction.jpg" onclick="openImage(this)">
+<h3 data-en="School construction project"
+    data-fr="Construction d’une école"></h3>
+<p data-en="Building schools to improve access to education in rural areas."
+   data-fr="Construction d’écoles pour améliorer l’accès à l’éducation en zone rurale."></p>
+</div>
+
+<!-- IMAGE 4 -->
+<div class="gallery-item fade-in">
+<img src="images/nutritionProgram.jpg" onclick="openImage(this)">
+<h3 data-en="Nutrition support program"
+    data-fr="Programme nutritionnel"></h3>
+<p data-en="Providing nutritious meals to children and vulnerable families."
+   data-fr="Distribution de repas nutritifs aux enfants et familles vulnérables."></p>
+</div>
+
+<!-- IMAGE 5 -->
+<div class="gallery-item fade-in">
+<img src="images/malnutrution.jpg"onclick="openImage(this)">
+<h3 data-en="Fighting malnutrition"
+    data-fr="Lutte contre la malnutrition"></h3>
+<p data-en="Supporting children with proper nutrition for healthy growth."
+   data-fr="Soutien nutritionnel pour assurer une bonne croissance des enfants."></p>
+</div>
+
+<!-- IMAGE 6 -->
+<div class="gallery-item fade-in">
+<img src="images/classroomLearning.jpg"onclick="openImage(this)">
+<h3 data-en="Learning in classroom"
+    data-fr="Apprentissage en classe"></h3>
+<p data-en="Children learning in a safe and supportive environment."
+   data-fr="Des enfants apprenant dans un environnement sûr et favorable."></p>
+</div>
+
+<!-- IMAGE 7 -->
+<div class="gallery-item fade-in">
+<img src="images/community.jpg "onclick="openImage(this)">
+<h3 data-en="Community outreach"
+    data-fr="Action communautaire"></h3>
+<p data-en="Working closely with communities to support families."
+   data-fr="Travail avec les communautés pour soutenir les familles."></p>
+</div>
+
+</div>
+
+</section>
+<!-- IMAGE POPUP -->
+<div id="imageModal" class="image-modal">
+  <span class="close-btn" onclick="closeImage()">&times;</span>
+  <img class="modal-img" id="popupImg">
+</div>
+
+<footer>© 2026 AMI</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

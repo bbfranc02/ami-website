@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images\logo2.png">
+	<title>Contact - AMI</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('fr')">FR</button>
+</div>
+
+<header>
+<div class="header-content">
+<img src="images/logo.png" class="logo">
+
+<div class="header-text">
+<h1 data-en="Mercy Association (AMI)" data-fr="Association Miséricorde (AMI)"></h1>
+<p data-en="Building hope for vulnerable communities"
+   data-fr="Construire l’espoir pour les communautés vulnérables"></p>
+</div>
+</div>
+</header>
+
+<nav>
+<a href="index.html" data-en="Home" data-fr="Accueil"></a>
+<a href="about.html" data-en="About" data-fr="À propos"></a>
+<a href="services.html" data-en="Services" data-fr="Services"></a>
+<a href="projects.html" data-en="Projects" data-fr="Réalisations"></a>
+<a href="gallery.html" data-en="Gallery" data-fr="Galerie"></a>
+<a href="contact.html" data-en="Contact" data-fr="Contact"></a>
+<a href="donate.html" class="donate-nav" data-en="Donate" data-fr="Don"></a>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+
+<h2 data-en="Contact Us" data-fr="Contactez-nous"></h2>
+
+<div class="contact-container">
+
+<!-- LEFT INFO -->
+<div class="contact-info">
+
+<h3 data-en="Our Office" data-fr="Notre bureau"></h3>
+
+<p><strong>📍</strong> Minembwe, South Kivu, DRC</p>
+<p><strong>📍</strong> Bukavu Office (Secondary)</p>
+
+<p><strong>📞</strong> +243 820 830 296</p>
+<p><strong>📞</strong> +243 811 773 309</p>
+<a href="mailto:antoruvuza@gmail.com" target="_blank"
+   style="color: green; text-decoration: none;"
+   onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='green'">
+<p><strong>📧</strong>antoruvuza@gmail.com</p> </a>
+<a href="mailto:bujambikc@gmail.com" target="_blank"
+	   style="color: green; text-decoration: none;"
+   onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='green'">
+<p><strong>📧</strong>bujambikc@gmail.com</p> </a>
+
+<p data-en="We work closely with communities, partners, and organizations to improve lives."
+   data-fr="Nous travaillons avec les communautés et partenaires pour améliorer les conditions de vie.">
+</p>
+
+</div>
+
+<!-- RIGHT FORM -->
+<div class="contact-form">
+
+<h3 data-en="Send us a message" data-fr="Envoyez-nous un message"></h3>
+
+<form id="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+<input type="text" name="website" style="display:none">
+
+<button type="submit" class="send-btn"
+        data-en="Send Message"
+        data-fr="Envoyer"></button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+<section class="map">
+
+<iframe 
+src="https://www.google.com/maps?q=Minembwe&output=embed"
+width="100%" height="350" style="border:0;">
+</iframe>
+
+</section>
+
+<footer>© 2026 AMI</footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+<div class="whatsapp-container">
+    <span class="wa-tooltip">Chat with us</span>
+
+    <a href="https://wa.me/243820830296" class="whatsapp" target="_blank">
+        💬
+    </a>
+	<span class="wa-tooltip"
+      data-en="Chat with us"
+      data-fr="Discutez avec nous">
+</span>
+</div>
+</body>
+</html>

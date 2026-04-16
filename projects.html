@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images\logo2.png">
+	<title>Projects - AMI</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('fr')">FR</button>
+</div>
+
+<header>
+    <div class="header-content">
+        
+        <!-- LOGO LEFT -->
+        <img src="images/logo.png" alt="AMI Logo" class="logo">
+
+        <!-- TEXT RIGHT -->
+        <div class="header-text">
+            <h1 data-en="Mercy Association (AMI)" data-fr="Association Miséricorde (AMI)"></h1>
+
+            <p data-en="Building hope for vulnerable communities"
+               data-fr="Construire l’espoir pour les communautés vulnérables"></p>
+        </div>
+		<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+<nav>
+<a href="index.html" data-en="Home" data-fr="Accueil"></a>
+<a href="about.html" data-en="About" data-fr="À propos"></a>
+<a href="services.html" data-en="Services" data-fr="Services"></a>
+<a href="projects.html" data-en="Projects" data-fr="Réalisations"></a>
+
+<!-- NEW PAGE -->
+<a href="gallery.html" data-en="Gallery" data-fr="Galerie"></a>
+
+<a href="contact.html" data-en="Contact" data-fr="Contact"></a>
+<a href="donate.html" class="donate-nav"
+   data-en="Donate"
+   data-fr="Don"></a>
+</nav>
+
+<section class="projects">
+
+<h2 data-en="Our Projects" data-fr="Nos Réalisations"></h2>
+
+<p data-en="AMI implements community-based projects focused on education, nutrition, gender equality, and environmental protection."
+   data-fr="AMI met en œuvre des projets communautaires axés sur l’éducation, la nutrition, l’égalité des genres et la protection de l’environnement.">
+</p>
+
+<div class="project-cards">
+
+<!-- EDUCATION -->
+<div class="project-card">
+<img src="images/education_project.jpg">
+<h3 data-en="Education Programs" data-fr="Programmes éducatifs"></h3>
+
+<p data-en="AMI supports orphaned children through school assistance, builds and equips schools, and promotes adult literacy."
+   data-fr="AMI soutient les enfants orphelins, construit et équipe des écoles et promeut l’alphabétisation des adultes.">
+</p>
+
+<ul>
+<li data-en="School construction in Kabingo (2015)"
+    data-fr="Construction d’une école à Kabingo (2015)"></li>
+
+<li data-en="Support for vulnerable students"
+    data-fr="Soutien aux élèves vulnérables"></li>
+</ul>
+</div>
+
+<!-- NUTRITION -->
+<div class="project-card">
+<img src="images/nutrition_project.jpg">
+<h3 data-en="Nutrition Programs" data-fr="Programmes nutritionnels"></h3>
+
+<p data-en="We improve community nutrition through training, food support, and agricultural initiatives."
+   data-fr="Nous améliorons la nutrition grâce à la formation, l’aide alimentaire et les initiatives agricoles.">
+</p>
+
+<ul>
+<li data-en="Bean seed distribution with ICRC (2023)"
+    data-fr="Distribution de semences avec le CICR (2023)"></li>
+
+<li data-en="Community vegetable gardens"
+    data-fr="Jardins communautaires"></li>
+</ul>
+</div>
+
+<!-- GBV -->
+<div class="project-card">
+<img src="images/gbv_project.jpg">
+<h3 data-en="Gender-Based Violence (GBV)" data-fr="Violences basées sur le genre"></h3>
+
+<p data-en="AMI supports survivors through psychological care, awareness campaigns, and reintegration programs."
+   data-fr="AMI soutient les survivants grâce à l’accompagnement psychologique et des programmes de réinsertion.">
+</p>
+
+<ul>
+<li data-en="Awareness and prevention programs"
+    data-fr="Programmes de sensibilisation"></li>
+
+<li data-en="Support for survivors"
+    data-fr="Soutien aux survivants"></li>
+</ul>
+</div>
+
+<!-- ENVIRONMENT -->
+<div class="project-card">
+<img src="images/environment_project.jpg">
+<h3 data-en="Environmental Protection" data-fr="Protection de l’environnement"></h3>
+
+<p data-en="AMI promotes sustainable environmental practices through reforestation and waste management."
+   data-fr="AMI promeut des pratiques durables à travers le reboisement et la gestion des déchets.">
+</p>
+
+<ul>
+<li data-en="Tree planting campaigns"
+    data-fr="Campagnes de reboisement"></li>
+
+<li data-en="Waste management initiatives"
+    data-fr="Gestion des déchets"></li>
+</ul>
+</div>
+
+</div>
+
+</section>
+<section class="impact">
+
+<h2 data-en="Our Impact" data-fr="Notre Impact"></h2>
+
+<div class="impact-cards">
+
+<div class="impact-card">
+<h3 class="counter" data-target="500">0</h3>
+<p data-en="Children Supported"
+   data-fr="Enfants soutenus"></p>
+</div>
+
+<div class="impact-card">
+<h3 class="counter" data-target="1000">0</h3>
+<p data-en="Meals Provided"
+   data-fr="Repas fournis"></p>
+</div>
+
+<div class="impact-card">
+<h3 class="counter" data-target="10">0</h3>
+<p data-en="Projects Completed"
+   data-fr="Projets réalisés"></p>
+</div>
+
+<div class="impact-card">
+<h3 class="counter" data-target="200">0</h3>
+<p data-en="Women Empowered"
+   data-fr="Femmes autonomisées"></p>
+</div>
+
+</div>
+
+</section>
+
+<footer>© 2026 AMI</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

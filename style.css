@@ -1,0 +1,843 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    padding-top: 150px; /* header + nav */
+}
+
+/* Language */
+.lang {
+    text-align: right;
+    padding: 10px;
+}
+
+/* HEADER */
+header {
+    background: #1f3a5f;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* NAVIGATION */
+nav {
+    background: #16324f;
+    padding: 12px;
+    text-align: center;
+
+    position: fixed;
+    top: 100px; /* MUST be >= header height */
+    width: 100%;
+
+    z-index: 1100; /* HIGHER than header */
+}
+
+/* WHEN SCROLL */
+header.scrolled {
+    padding: 5px 10px;
+}
+
+/* MOVE NAV UP */
+nav.scrolled {
+    top: 60px; /* new smaller header height */
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Card images */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Card text */
+.card p {
+    padding: 15px;
+}
+
+/* Footer */
+footer {
+    background: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+/* NAV HOVER */
+nav a:hover {
+    color: #f1c40f;
+    transition: 0.3s;
+}
+
+/* CARD HOVER EFFECT */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* IMAGE ZOOM */
+.card img {
+    transition: transform 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+/* ANIMATION BASE */
+.fade-in {
+	opacity: 1;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Overlay */
+.card::after {
+    content: "Learn More";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* Show overlay on hover */
+.card:hover::after {
+    opacity: 1;
+}
+
+/* MODAL BACKGROUND */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* MODAL BOX */
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: fadeIn 0.4s ease;
+}
+
+/* CLOSE BUTTON */
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+/* Active menu */
+nav a.active {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}
+
+
+
+/* HEADER LAYOUT */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.logo {
+    width: 70px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* TEXT NEXT TO LOGO */
+.header-text h1 {
+    margin: 0;
+    color: white;
+}
+
+.header-text p {
+    margin: 0;
+    color: #ddd;
+	font-size: 14px;
+    opacity: 0.9;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* GALLERY GRID */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ITEM */
+.gallery-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGE */
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.gallery-item h3 {
+    margin: 10px;
+}
+
+.gallery-item p {
+    margin: 10px;
+    font-size: 14px;
+}
+/* IMAGE MODAL */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+/* IMAGE INSIDE MODAL */
+.modal-img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    animation: zoomIn 0.4s;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes zoomIn {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
+}
+.gallery-item img {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-item img:hover {
+    opacity: 0.85;
+}
+/* HERO */
+.donate-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("images/community.jpg");
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* INFO */
+.donate-info {
+    padding: 40px;
+    text-align: center;
+}
+
+/* IMPACT */
+.impact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: #f8f9fb;
+    padding: 60px 20px;
+}
+
+/* METHODS */
+.donation-methods {
+    padding: 40px;
+    text-align: center;
+}
+
+.methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.method {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* CTA */
+.donate-cta {
+    text-align: center;
+    padding: 60px;
+    background: #1f3a5f;
+    color: white;
+}
+
+.donate-btn {
+    padding: 12px 25px;
+    background: #f1c40f;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* DONATE BUTTON IN NAV */
+.donate-nav {
+    background: #f1c40f;
+    color: black !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.donate-nav:hover {
+    background: #d4ac0d;
+    transform: scale(1.05);
+	animation: none;
+    }
+.donate-nav {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	background: #f1c40f;
+    color: black !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
+
+    animation: pulse 5s infinite;
+}
+/* PULSE ANIMATION */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(241, 196, 15, 0.7);
+    }
+    70% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 10px rgba(241, 196, 15, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(241, 196, 15, 0);
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* TEXT ABOVE */
+.hero-content h1 {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* TEXT */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+ }
+
+/* ARROWS */
+
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+/* SLIDES */
+.slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ACTIVE */
+.slide.active {
+    opacity: 1;
+}
+
+/* TEXT */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 30%;
+}
+
+/* ARROWS */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* DOTS */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dots span {
+    height: 12px;
+    width: 12px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.dots span.active {
+    opacity: 1;
+}
+section h3 {
+    color: #1f3a5f;
+    margin-top: 30px;
+}
+
+section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+/* TEAM SECTION */
+.team {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* GRID */
+.team-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* CARD */
+.team-card {
+    background: white;
+    border-radius: 12px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* NAME */
+.team-card h3 {
+    margin: 15px 0 5px;
+}
+
+/* ROLE */
+.team-card p {
+    color: #777;
+}
+
+/* HOVER EFFECT */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* PROJECTS */
+.projects {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* GRID */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* CARD */
+.project-card {
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: left;
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.project-card h3 {
+    margin: 15px;
+}
+
+.project-card p {
+    margin: 0 15px 10px;
+    font-size: 14px;
+}
+
+.project-card ul {
+    margin: 10px 20px 20px;
+    font-size: 14px;
+}
+
+/* HOVER */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* IMPACT SECTION */
+.impact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+/* GRID */
+.impact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* CARD */
+.impact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+   }
+
+.impact-card:hover {
+    transform: translateY(-8px);
+	box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* NUMBER */
+.impact-card h3 {
+    font-size: 32px;
+    color: #1f3a5f;
+}
+
+/* TEXT */
+.impact-card p {
+    margin-top: 10px;
+}
+.impact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.counter {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1f3a5f;
+}
+/* contact*/
+/* CONTACT */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* LEFT */
+.contact-info {
+    width: 300px;
+    text-align: left;
+}
+
+/* FORM */
+.contact-form {
+    width: 350px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.send-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1f3a5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background: #16324f;
+}
+
+/* MAP */
+.map {
+    margin-top: 40px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2000;
+    transition: 0.3s;
+    animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp:hover {
+    animation: none;
+    transform: scale(1.1);
+}
+/* PULSE ANIMATION */
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* CONTAINER */
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+/* TOOLTIP */
+.wa-tooltip {
+    position: absolute;
+    right: 60px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: #1f3a5f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+/* SHOW TOOLTIP ON HOVER */
+.whatsapp-container:hover .wa-tooltip {
+    opacity: 1;
+    right: 70px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    background: #25D366;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    animation: whatsappPulse 2s infinite;
+}

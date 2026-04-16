@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images\logo2.png">
+	<title>Services - AMI</title>
+
+<!-- CSS LINK (IMPORTANT) -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Language buttons -->
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('fr')">FR</button>
+</div>
+
+<header>
+    <div class="header-content">
+        
+        <!-- LOGO LEFT -->
+        <img src="images/logo.png" alt="AMI Logo" class="logo">
+
+        <!-- TEXT RIGHT -->
+        <div class="header-text">
+            <h1 data-en="Mercy Association (AMI)" data-fr="Association Miséricorde (AMI)"></h1>
+
+            <p data-en="Building hope for vulnerable communities"
+               data-fr="Construire l’espoir pour les communautés vulnérables"></p>
+        </div>
+		<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+<nav>
+<a href="index.html" data-en="Home" data-fr="Accueil"></a>
+<a href="about.html" data-en="About" data-fr="À propos"></a>
+<a href="services.html" data-en="Services" data-fr="Services"></a>
+<a href="projects.html" data-en="Projects" data-fr="Réalisations"></a>
+
+<!-- NEW PAGE -->
+<a href="gallery.html" data-en="Gallery" data-fr="Galerie"></a>
+
+<a href="contact.html" data-en="Contact" data-fr="Contact"></a>
+<a href="donate.html" class="donate-nav"
+   data-en="Donate"
+   data-fr="Don"></a>
+</nav>
+
+<section class="fade-in">
+
+<div class="cards">
+
+<div class="card fade-in" onclick="openService('education')">
+<img src="images/education.jpg">
+<p 📘 data-en="Education programs and school support"
+   data-fr="Programmes éducatifs et soutien scolaire"></p>
+</div>
+
+<div class="card fade-in" onclick="openService('education')">
+<img src="images/nutrition.jpg">
+<p 🍎 data-en="Nutrition programs for communities"
+   data-fr="Programmes nutritionnels pour les communautés"></p>
+</div>
+
+<div class="card fade-in" onclick="openService('education')">
+<img src="images/environment.jpg">
+<p 🌱 data-en="Environmental protection activities"
+   data-fr="Activités de protection de l’environnement"></p>
+</div>
+
+</div>
+
+</section>
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+  </div>
+</div>
+
+<footer>© 2026 AMI</footer>
+
+<!-- JAVASCRIPT LINK (VERY IMPORTANT) -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images\logo2.png">
+	<title>AMI</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LANGUAGE -->
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('fr')">FR</button>
+</div>
+
+<!-- HEADER -->
+<header>
+<div class="header-content">
+
+<img src="images/logo.png" alt="AMI Logo" class="logo">
+
+<div class="header-text">
+<h1 data-en="Mercy Association (AMI)" data-fr="Association Miséricorde (AMI)"></h1>
+
+<p data-en="Building hope for vulnerable communities"
+   data-fr="Construire l’espoir pour les communautés vulnérables"></p>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+</div>
+</header>
+
+<!-- NAV -->
+<nav>
+<a href="index.html" data-en="Home" data-fr="Accueil"></a>
+<a href="about.html" data-en="About" data-fr="À propos"></a>
+<a href="services.html" data-en="Services" data-fr="Services"></a>
+<a href="projects.html" data-en="Projects" data-fr="Réalisations"></a>
+<a href="gallery.html" data-en="Gallery" data-fr="Galerie"></a>
+<a href="contact.html" data-en="Contact" data-fr="Contact"></a>
+<a href="donate.html" class="donate-nav"
+   data-en="Donate"
+   data-fr="Don"></a>
+</nav>
+
+<!-- HERO (FIRST SECTION) -->
+<section class="hero">
+
+<div class="slides">
+
+<div class="slide active">
+<img src="images/edu1.jpg"style="max-width:100%; height:auto;">
+</div>
+
+<div class="slide">
+<img src="images/nutrition1.jpg"style="max-width:100%; height:auto;">
+</div>
+
+<div class="slide">
+<img src="images/communitySlide.jpg">
+</div>
+
+</div>
+
+<div class="hero-content">
+<h1 data-en="Together We Build Hope"
+    data-fr="Ensemble nous construisons l’espoir"></h1>
+
+<p data-en="Empowering communities through education, nutrition, and social support."
+   data-fr="Autonomiser les communautés grâce à l’éducation, la nutrition et le soutien social."></p>
+
+<a href="donate.html" class="donate-btn"
+   data-en="Support Our Mission"
+   data-fr="Soutenez notre mission"></a>
+</div>
+
+<!-- ARROWS -->
+<button class="prev">❮</button>
+<button class="next">❯</button>
+
+<!-- DOTS -->
+<div class="dots">
+<span class="active"></span>
+<span></span>
+<span></span>
+</div>
+
+</section>
+
+<!-- GET INVOLVED -->
+<section class="involved fade-in">
+
+<h2 data-en="Get Involved"
+    data-fr="Impliquez-vous"></h2>
+
+<p data-en="Join us in transforming lives and building a better future."
+   data-fr="Rejoignez-nous pour transformer des vies et construire un avenir meilleur."></p>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/edu1.jpg" style="max-width:100%; height:auto;">
+<h3 data-en="Support Education"
+    data-fr="Soutenir l’éducation"></h3>
+<p data-en="Help children access quality education."
+   data-fr="Aider les enfants à accéder à une éducation de qualité."></p>
+</div>
+
+<div class="card">
+<img src="images/malnutrution_home.jpg" style="max-width:100%; height:auto;">
+<h3 data-en="Fight Malnutrition"
+    data-fr="Lutter contre la malnutrition"></h3>
+<p data-en="Provide meals and nutrition support."
+   data-fr="Fournir des repas et un soutien nutritionnel."></p>
+</div>
+
+<div class="card">
+<img src="images/community_home.jpg" style="max-width:100%; height:auto;">
+<h3 data-en="Support Communities"
+    data-fr="Soutenir les communautés"></h3>
+<p data-en="Empower families and improve living conditions."
+   data-fr="Autonomiser les familles et améliorer les conditions de vie."></p>
+</div>
+
+</div>
+
+</section>
+
+<!-- IMPACT -->
+<section class="impact fade-in">
+
+<div>
+<h2>500+</h2>
+<p data-en="Children Supported"
+   data-fr="Enfants soutenus"></p>
+</div>
+
+<div>
+<h2>1000+</h2>
+<p data-en="Meals Provided"
+   data-fr="Repas fournis"></p>
+</div>
+
+<div>
+<h2>10+</h2>
+<p data-en="Projects Completed"
+   data-fr="Projets réalisés"></p>
+</div>
+
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta fade-in">
+
+<h2 data-en="Be Part of the Change"
+    data-fr="Faites partie du changement"></h2>
+
+<a href="donate.html" class="donate-btn"
+   data-en="Donate Now"
+   data-fr="Faire un don"></a>
+
+</section>
+
+<footer>© 2026 AMI</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
