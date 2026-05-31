@@ -557,47 +557,67 @@ section ul {
     padding-left: 20px;
 }
 /* TEAM SECTION */
+/* TEAM SECTION */
 .team {
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
+    background: #f8f9fc;
 }
 
-/* GRID */
 .team-cards {
     display: flex;
-    gap: 30px;
-    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 30px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* CARD */
 .team-card {
     background: white;
-    border-radius: 12px;
-    width: 250px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
-/* IMAGE */
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
 .team-card img {
     width: 100%;
-    height: 250px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    margin-top: 20px;
+    color: #1f3a5f;
+}
+
+.team-card h4 {
+    color: #f1c40f;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.team-card p {
+    padding: 0 20px 25px;
+    color: #555;
+}
+/* IMAGE */
+.team-card img {
+    width: 90%;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
 }
 
 /* NAME */
-.team-card h3 {
-    margin: 15px 0 5px;
-}
 
 /* ROLE */
-.team-card p {
-    color: #777;
-}
+
 
 /* HOVER EFFECT */
 .team-card:hover {
